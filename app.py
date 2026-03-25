@@ -1,1 +1,10 @@
-print("Hello Uday! Docker project running 🚀")
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello Uday! Docker + Render working 🚀"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
